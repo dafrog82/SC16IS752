@@ -145,6 +145,10 @@ public:
                            uint8_t int_ena);
   void    ModemPin(uint8_t gpio); // gpio == 0, gpio[7:4] are modem pins, gpio == 1 gpio[7:4] are gpios
   void    GPIOLatch(uint8_t latch);
+  void    SetLine(uint8_t channel,
+                  uint8_t data_length,
+                  uint8_t parity_select,
+                  uint8_t stop_length);
 
 private:
 
@@ -164,10 +168,6 @@ private:
   void    WriteRegister(uint8_t channel,
                         uint8_t reg_addr,
                         uint8_t val);
-  void    SetLine(uint8_t channel,
-                  uint8_t data_length,
-                  uint8_t parity_select,
-                  uint8_t stop_length);
   void    GPIOSetPinMode(uint8_t pin_number,
                          uint8_t i_o);
   void    GPIOSetPinState(uint8_t pin_number,
