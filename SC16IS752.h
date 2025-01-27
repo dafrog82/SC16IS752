@@ -29,6 +29,8 @@
  # include "WProgram.h"
 #endif // if ARDUINO >= 100
 
+#include "SC16IS752Stream.h"
+
 // Device Address
 
 // A:VDD
